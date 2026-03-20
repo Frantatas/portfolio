@@ -235,6 +235,14 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
+}
+
+.badge-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .badge-circle::before {
@@ -245,11 +253,7 @@ a {
   border-radius: 50%;
 }
 
-.badge-circle span {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #6f42c1;
-}
+
 
 .skills-grid {
   padding: 24px;
@@ -290,8 +294,9 @@ a {
 .projects-grid {
   padding: 24px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+  align-items: start;
 }
 
 .project-card {
@@ -318,6 +323,24 @@ a {
   color: #555;
   line-height: 1.7;
   font-size: 0.95rem;
+}
+
+.embed-card {
+  grid-column: span 1;
+  cursor: default;
+}
+
+.embed-card:hover {
+  transform: none;
+}
+
+.figma-frame {
+  width: 100%;
+  height: 350px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-top: 14px;
+  background: #ffffff;
 }
 
 .contact-box {
@@ -386,5 +409,9 @@ a {
 
   .badge-circle span {
     font-size: 2.2rem;
+  }
+
+  .figma-frame {
+    height: 260px;
   }
 }
